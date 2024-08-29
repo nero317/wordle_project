@@ -1,4 +1,5 @@
 # Wordle_project
 
 Flutter Wordle game
-하던가 말던가
+
+Flutter 연습용으로 만들었습니다
