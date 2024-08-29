@@ -8,6 +8,10 @@ class WordleGame {
   int _attempts = 0;
   bool _gameOver = false;
 
+  Set<String> correctLetters = {};
+  Set<String> presentLetters = {};
+  Set<String> absentLetters = {};
+
   WordleGame() {
     startNewGame();
   }
@@ -31,6 +35,17 @@ class WordleGame {
     } else if (_attempts >= 6) {
       _gameOver = true;
     }
+
+    for (int i = 0; i < 5; i++) {
+      if (guess[i] == currentWord[i]) {
+        correctLetters.add(guess[i]);
+      } else if (currentWord.contains(guess[i])) {
+        presentLetters.add(guess[i]);
+      } else {
+        absentLetters.add(guess[i]);
+      }
+    }
+
     return true;
   }
 

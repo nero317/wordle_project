@@ -198,6 +198,7 @@ class WordList {
     "GIVEN",
     "GLASS",
     "GLOBE",
+    "GHOST",
     "GOING",
     "GRACE",
     "GRADE",
